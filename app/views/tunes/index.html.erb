@@ -1,0 +1,37 @@
+<h1>Listing tunes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Composer</th>
+      <th>Key</th>
+      <th>Meter</th>
+      <th>Type</th>
+      <th>Collection</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tunes.each do |tune| %>
+      <tr>
+        <td><%= tune.title %></td>
+        <td><%= tune.composer %></td>
+        <td><%= tune.key %></td>
+        <td><%= tune.meter %></td>
+        <td><%= tune.tune_type %></td>
+        <td><%= tune.collection_id %></td>
+        <td><%= link_to 'Show', tune %></td>
+        <td><%= link_to 'Edit', edit_tune_path(tune) %></td>
+        <td><%= link_to 'Destroy', tune, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tune', new_tune_path %>

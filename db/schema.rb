@@ -11,12 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140502005314) do
+ActiveRecord::Schema.define(version: 20140502010450) do
 
   create_table "collections", force: true do |t|
     t.string   "title"
     t.string   "collector"
     t.integer  "publication_year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tunes", force: true do |t|
+    t.string   "title"
+    t.string   "composer"
+    t.string   "key"
+    t.string   "meter"
+    t.string   "tune_type"
+    t.integer  "collection_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

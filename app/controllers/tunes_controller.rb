@@ -1,5 +1,6 @@
 class TunesController < ApplicationController
   before_action :set_tune, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /tunes
   # GET /tunes.json

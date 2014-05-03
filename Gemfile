@@ -9,6 +9,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
+gem 'devise'
+gem 'cancan'
+
 group :test, :development do
   gem 'sqlite3'
 end

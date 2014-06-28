@@ -1,6 +1,12 @@
 Fortuneate::Application.routes.draw do
-  resources :tunes do as_routes end
-  resources :collections do as_routes end
+  resources :collections do
+    as_routes
+    resources :tunes do
+      as_routes
+      record_select_routes
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

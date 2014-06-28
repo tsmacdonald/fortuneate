@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require active_scaffold
+//= require record_select
 //= require_tree .

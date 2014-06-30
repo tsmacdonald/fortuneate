@@ -7,6 +7,9 @@ Fortuneate::Application.routes.draw do
       #record_select_routes
     end
   end
+  get 'variations' => 'tunes#variations'
+  get 'two_parts' => 'tunes#two_parts'
+  get 'minuets' => 'tunes#minuets'
 
   root to: 'collections#index'
 

@@ -10,4 +10,19 @@ class TunesController < ApplicationController
     config.columns
 
   end
+
+  def variations
+    @tunes = Tune.where('variation_count > 0')
+    render 'index'
+  end
+
+  def two_parts
+    @tunes = Tune.where('treble_part_count > 1')
+    render 'index'
+  end
+
+  def minuets
+    @tunes = Tune.where(tune_type: 'Minuet')
+    render 'index'
+  end
 end

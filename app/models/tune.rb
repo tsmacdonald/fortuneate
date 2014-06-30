@@ -13,6 +13,7 @@ class Tune < ActiveRecord::Base
     self.treble_part_count ||= 1
     self.movement_count ||= 1
     self.bass_type ||= "None"
+    self.composer ||= self.collection.try :collector
   end
 
   def clean
